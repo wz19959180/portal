@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(tags = "客户案例")
 @RestController
+@RequestMapping("/api")
 public class ExampleController {
 
     @Autowired

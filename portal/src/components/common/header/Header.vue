@@ -8,15 +8,15 @@
 				<div class="header-item">
 					<i style="color:#7c6aa6" class="contact-icon am-icon-phone"></i>
 					<div class="item">
-						<strong>15284734573</strong>
+						<strong>010-60866572</strong>
 						<span>周一 ~ 周五, 8:30 - 17:30</span>
 					</div>
 				</div>
 				<div class="header-item">
 					<i style="color:#7c6aa6" class="contact-icon am-icon-map-marker"></i>
 					<div class="item">
-						<strong>四川省成都市高新区</strong>
-						<span>四川XXXX有限公司</span>
+						<strong>广州市天河区天河路600号</strong>
+						<span>广东省肝病重点实验室</span>
 					</div>
 				</div>
 			</div>

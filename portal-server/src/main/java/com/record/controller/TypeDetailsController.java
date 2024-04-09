@@ -23,6 +23,7 @@ import java.util.List;
  */
 @RestController
 @Api(tags = "电梯种类详情")
+@RequestMapping("/api")
 public class TypeDetailsController {
 
     @Autowired

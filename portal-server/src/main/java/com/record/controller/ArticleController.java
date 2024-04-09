@@ -26,6 +26,7 @@ import java.util.List;
  */
 @Api(tags = "文章")
 @RestController
+@RequestMapping("/api")
 public class ArticleController {
 
     @Autowired

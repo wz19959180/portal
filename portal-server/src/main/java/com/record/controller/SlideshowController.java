@@ -22,6 +22,7 @@ import java.util.List;
  */
 @RestController
 @Api(tags = "轮播图")
+@RequestMapping("/api")
 public class SlideshowController {
 
     @Autowired
