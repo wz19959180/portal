@@ -31,7 +31,7 @@ public class SwaggerConfig {
                 // return new Docket(DocumentationType.OAS_30)  // 3
                 .pathMapping("/")
                 .enable(true)
-                .host("localhost:8888")
+                .host("localhost:8081")
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.record.controller"))
@@ -44,11 +44,11 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("四川XXXX有限公司")
-                .description("四川XXXX有限公司——接口文档")
-                .contact(new Contact("京茶吉鹿", "http:localhost:8888/doc.html", "jc.jingchao@qq.com"))
+                .title("hws")
+                .description("肝细胞癌——接口文档")
+                .contact(new Contact("京茶吉鹿", "http:localhost:8081/doc.html", "1667605739@qq.com"))
                 .version("1.0.0")
-                .termsOfServiceUrl("http://localhost:8888")
+                .termsOfServiceUrl("http://localhost:8081")
                 .build();
     }
 
