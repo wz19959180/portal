@@ -1,10 +1,15 @@
 package com.record.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.github.xiaoymin.knife4j.core.util.StrUtil;
 import com.record.entity.HepatoCAR;
 import com.record.mapper.HepatoCARMapper;
+import com.record.portalenum.ErrorType;
+import com.record.portalexception.PortalException;
 import com.record.service.HepatoCARService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -22,8 +27,14 @@ import java.util.Objects;
 @Service
 public class HepatoCARServiceImpl extends ServiceImpl<HepatoCARMapper, HepatoCAR> implements HepatoCARService {
 
+
+    private static final Logger logger = LoggerFactory.getLogger(HepatoCARServiceImpl.class);
     @Override
     public HepatoCAR getScore(HepatoCAR hepatoCAR) {
+        if (StrUtil.isBlank(hepatoCAR.getAfp())||StrUtil.isBlank(hepatoCAR.getMiRNA15a())
+                ||StrUtil.isBlank(hepatoCAR.getMiRNA16())){
+            throw new PortalException(ErrorType.INVALID_PARAMS.getCode(),"miRNA15a,miRNA16,apf不能为空");
+        }
         double hccRisk = calculateHCCRisk(Double.parseDouble(hepatoCAR.getMiRNA15a()), Double.parseDouble(hepatoCAR.getMiRNA16()), Double.parseDouble(hepatoCAR.getAfp()));
         hepatoCAR.setScore(String.valueOf(hccRisk));
         saveHepatoCAR(hepatoCAR);

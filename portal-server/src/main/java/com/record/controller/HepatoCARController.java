@@ -22,6 +22,7 @@ import java.util.List;
  */
 @Api(tags = "肝细胞癌风险评估")
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 public class HepatoCARController {
 
