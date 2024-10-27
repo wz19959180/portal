@@ -51,6 +51,7 @@ public class FastAutoGeneratorTest {
                             .enableRestStyle() // 开启 @RestController控制器
                             .enableFileOverride() //允许文件覆盖
 
+
                             .serviceBuilder()
                             .formatServiceFileName("%sService") //去除Service前面的I
                             .formatServiceImplFileName("%sServiceImpl")
