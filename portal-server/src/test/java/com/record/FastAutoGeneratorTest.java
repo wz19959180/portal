@@ -11,7 +11,7 @@ public class FastAutoGeneratorTest {
     public static void main(String[] args) {
         FastAutoGenerator.create("jdbc:mysql://localhost:3306/portal?characterEncoding=utf-8&userSSL=false", "root", "123456")
                 .globalConfig(builder -> {
-                    builder.author("京茶吉鹿") // 设置作者
+                    builder.author("wztest") // 设置作者
                             .enableSwagger() // 开启 swagger 模式
                             .outputDir("E://mybatis_plus//portal")  // 指定输出目录
                             .commentDate("yyyy-MM-dd"); // 注释日期
